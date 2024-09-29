@@ -22,6 +22,13 @@ services:
       # Uncomment this if IPv6 is not enabled on your host
       DISABLE_IPV6: 'true'
 
+    networks:
+      - portainer_default
+
     volumes:
       - /opt/docker/nginxproxymanager/data:/data
       - /opt/docker/nginxproxymanager/letsencrypt:/etc/letsencrypt
+
+networks:
+  portainer_default:
+    external: true
