@@ -23,21 +23,24 @@ services:
       DISABLE_IPV6: 'true'
 
     networks:
-      - portainer_default
+      - adminer_default
       - mariadb_default
-      - web_default
+      - portainer_default
       - postgresql_default
+      - web_default
 
     volumes:
       - /opt/docker/nginxproxymanager/data:/data
       - /opt/docker/nginxproxymanager/letsencrypt:/etc/letsencrypt
 
 networks:
-  portainer_default:
+  adminer_default:
     external: true
   mariadb_default:
     external: true
-  web_default:
+  portainer_default:
     external: true
   postgresql_default:
+    external: true
+  web_default:
     external: true
