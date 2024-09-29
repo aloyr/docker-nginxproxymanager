@@ -24,6 +24,7 @@ services:
 
     networks:
       - adminer_default
+      - authentik_default
       - portainer_default
       - web_default
 
@@ -33,6 +34,8 @@ services:
 
 networks:
   adminer_default:
+    external: true
+  authentik_default:
     external: true
   portainer_default:
     external: true
