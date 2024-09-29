@@ -23,21 +23,12 @@ services:
       DISABLE_IPV6: 'true'
 
     networks:
-      - adminer_default
-      - authentik_default
-      - portainer_default
-      - web_default
+      - default
 
     volumes:
       - /opt/docker/nginxproxymanager/data:/data
       - /opt/docker/nginxproxymanager/letsencrypt:/etc/letsencrypt
 
 networks:
-  adminer_default:
-    external: true
-  authentik_default:
-    external: true
-  portainer_default:
-    external: true
-  web_default:
-    external: true
+  default:
+    driver: bridge
