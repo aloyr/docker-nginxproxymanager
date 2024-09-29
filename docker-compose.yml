@@ -10,7 +10,7 @@ services:
       #- '81:81' # Admin Web Port
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
-#    expose:
+    expose:
       - 81
 
     # Uncomment the next line if you uncomment anything in the section
