@@ -27,6 +27,7 @@ services:
       - mariadb_default
       - portainer_default
       - postgresql_default
+      - vizualizer_default
       - web_default
 
     volumes:
@@ -41,6 +42,8 @@ networks:
   portainer_default:
     external: true
   postgresql_default:
+    external: true
+  vizualizer_default:
     external: true
   web_default:
     external: true
