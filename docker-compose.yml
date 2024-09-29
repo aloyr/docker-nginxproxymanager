@@ -24,6 +24,7 @@ services:
 
     networks:
       - portainer_default
+      - mariadb_default
 
     volumes:
       - /opt/docker/nginxproxymanager/data:/data
@@ -31,4 +32,6 @@ services:
 
 networks:
   portainer_default:
+    external: true
+  mariadb_default:
     external: true
